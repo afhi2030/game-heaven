@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { NavLink as Link  } from 'react-router-dom';
 import { AiOutlineClose } from 'react-icons/ai';
-import { yellow } from '../common/color';
+import { yellow } from './common/color';
 
 const SliderContainer = styled.div`
   top: 0;
@@ -43,6 +43,7 @@ const Icon = styled.div`
 `;
 
 const MenuList = styled.div`
+  width: 100%;
   height: 50%;
   display: flex;
   flex-direction: column;
@@ -50,6 +51,9 @@ const MenuList = styled.div`
 `;
 
 const Menu = styled(Link)`
+  display: flex;
+  padding: 10px;
+  justify-content: center;
   color: #fff;
   text-decoration: none;
   font-size: 2rem;
@@ -60,17 +64,17 @@ const Menu = styled(Link)`
   }
 `;
 
-function MenuSlider({ isOpen, toggleMenuSlider }) {
+function MenuSlider({ isOpen, toggleMenuSlider, toggleMnueAfterClickLink }) {
   return (
     <SliderContainer isOpen={isOpen}>
       <Icon onClick={toggleMenuSlider}>
         <AiOutlineClose />
       </Icon>
       <MenuList>
-        <Menu to="/">로그인</Menu>
-        <Menu to="/">게임</Menu>
-        <Menu to="/">랭킹</Menu>
-        <Menu to="/">전적</Menu>
+        <Menu to="/" onClick={toggleMnueAfterClickLink}>로그인</Menu>
+        <Menu to="/game" onClick={toggleMnueAfterClickLink}>게임</Menu>
+        <Menu to="/ranking/1" onClick={toggleMnueAfterClickLink}>랭킹</Menu>
+        <Menu to="/dashboard" onClick={toggleMnueAfterClickLink}>전적</Menu>
       </MenuList>
     </SliderContainer>
   )
