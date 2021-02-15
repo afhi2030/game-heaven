@@ -1,10 +1,7 @@
 import React from 'react';
 import { NavLink as Link } from 'react-router-dom';
 import styled from 'styled-components';
-import { BiMenu } from 'react-icons/bi';
 import { blue } from '../common/color';
-import MenuSlider from './slider';
-
 
 const HeaderContainer = styled.div`
   height: 100px;
@@ -30,29 +27,10 @@ const HomeLogo = styled(Link)`
   }
 `;
 
-const MenuIcon = styled.div`
-  display: block;
-  position: absolute;
-  top: 0;
-  right: 0;
-  cursor: pointer;
-  color: #fff;
-  svg {
-    width: 2rem;
-    height: 2rem;
-    transform: translate(-100%, 100%);
-    /* font-weight: bold; */
-  }
-`;
-
-function Header({ isOpen, toggleMenuSlider }) {
+function Header() {
   return (
     <HeaderContainer>
       <HomeLogo to="/">미니게임천국</HomeLogo>
-      <MenuIcon>
-        <BiMenu onClick={toggleMenuSlider} />
-        <MenuSlider isOpen={isOpen} toggleMenuSlider={toggleMenuSlider}/>
-      </MenuIcon>
     </HeaderContainer>
   )
 };

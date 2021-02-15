@@ -6,17 +6,15 @@ import GlobalStyle from './globalStyle';
 
 const LayoutContainer = styled.div`
   height: 100vh;
+  display: flex;
+  flex-direction: column;
 `;
 
 export default ({ children }) => {
-  const [isOpen, setIsOpen] = useState(false);
-  const toggleMenuSlider = () => {
-    setIsOpen((currentVale) => (!currentVale));
-  }
   return (
     <LayoutContainer>
       <GlobalStyle />
-      <Header isOpen={isOpen} toggleMenuSlider={toggleMenuSlider}/>
+      <Header/>
         {children}
       <Footer />
     </LayoutContainer>
