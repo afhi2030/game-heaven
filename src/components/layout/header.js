@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink as Link } from 'react-router-dom';
 import styled from 'styled-components';
-import { blue } from '../common/color';
+import { blue } from '../Common/color';
 
 const HeaderContainer = styled.div`
   height: 100px;

@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useContext } from 'react';
 
 function Authentication() {
+  console.log(user);
   return (
     <div>
       Authentication

@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { NavLink as Link  } from 'react-router-dom';
 import { AiOutlineClose } from 'react-icons/ai';
-import { yellow } from './common/color';
+import { yellow } from './Common/color';
 
 const SliderContainer = styled.div`
   top: 0;
@@ -71,7 +71,8 @@ function MenuSlider({ isOpen, toggleMenuSlider, toggleMnueAfterClickLink }) {
         <AiOutlineClose />
       </Icon>
       <MenuList>
-        <Menu to="/" onClick={toggleMnueAfterClickLink}>로그인</Menu>
+        <Menu to="/" onClick={toggleMnueAfterClickLink}>홈</Menu>
+        <Menu to="/auth/login" onClick={toggleMnueAfterClickLink}>로그인</Menu>
         <Menu to="/game" onClick={toggleMnueAfterClickLink}>게임</Menu>
         <Menu to="/ranking/1" onClick={toggleMnueAfterClickLink}>랭킹</Menu>
         <Menu to="/dashboard" onClick={toggleMnueAfterClickLink}>전적</Menu>
