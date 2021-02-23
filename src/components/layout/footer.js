@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { blue } from '../common/color';
+import { blue } from '../Common/color';
 
 const FooterContainer = styled.div`
   height: 90px;
